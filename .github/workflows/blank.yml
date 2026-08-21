@@ -45,7 +45,7 @@ jobs:
           tetromino_count: "5"
 
           # Tema escuro do GitHub
-          palette: "github-dark"
+          palette: "auto"
 
           # Duração da queda
           animation_duration: "8"
