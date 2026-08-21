@@ -1,8 +1,6 @@
 <h2 align="center"> Olá, eu sou o Igor Roberto 👋</h2>
 
-<div align="center">
-  <img height="300" src="https://avatars.githubusercontent.com/u/238780332?v=4" />
-</div>
+
 
 🎓 Desenvolvedor **Full-Stack** e estudante de **Ciência da Computação** na **Universidade de Fortaleza (UNIFOR)**, com foco em **Engenharia de Software** e **Automações**, apaixonado por desenvolvimento de soluções tecnológicas de qualidade.
 
