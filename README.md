@@ -48,6 +48,8 @@
 
 Sempre em busca de novos desafios e oportunidades para aprender, colaborar e criar soluções que façam a diferença.
 
+---
+
 <div align="center">
 <img src="https://raw.githubusercontent.com/IgorStk/IgorStk/output/contribution-graph-tetris.svg" />
 </div>
