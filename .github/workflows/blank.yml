@@ -2,8 +2,13 @@ name: Generate Tetris Contribution Graph
 
 on:
   schedule:
+    # Atualiza o gráfico diariamente à meia-noite UTC
     - cron: "0 0 * * *"
+
+  # Permite executar manualmente pela aba Actions
   workflow_dispatch:
+
+  # Atualiza quando houver push na branch principal
   push:
     branches:
       - main
@@ -16,17 +21,158 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+
+      # ==========================================
+      # Baixa o conteúdo do repositório
+      # ==========================================
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ==========================================
+      # Gera o gráfico Tetris
+      # ==========================================
 
       - name: Generate Tetris animation
         uses: leereilly/contribution-graph-art@v1
         with:
           github_user_name: ${{ github.repository_owner }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          tetromino_count: "5"
+
           output_path: dist/contribution-graph-tetris.svg
-          palette: "auto"
+
+          # Quantidade de peças
+          tetromino_count: "5"
+
+          # Tema escuro do GitHub
+          palette: "github-dark"
+
+          # Duração da queda
           animation_duration: "8"
+
+      # ==========================================
+      # Personaliza o SVG
+      # ==========================================
+
+      - name: Customize Tetris animation
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          svg_path = Path("dist/contribution-graph-tetris.svg")
+
+          svg = svg_path.read_text(encoding="utf-8")
+
+          # ------------------------------------------
+          # CONFIGURAÇÕES
+          # ------------------------------------------
+
+          BACKGROUND = "#161b22"
+
+          # Tempo da animação original
+          ANIMATION_TIME = 8
+
+          # Tempo de espera antes de reiniciar
+          PAUSE_TIME = 2
+
+          # Tempo total do loop
+          TOTAL_TIME = ANIMATION_TIME + PAUSE_TIME
+
+          # ------------------------------------------
+          # 1. Adiciona o fundo escuro
+          # ------------------------------------------
+
+          background = f'''
+          <rect
+              x="0"
+              y="0"
+              width="100%"
+              height="100%"
+              fill="{BACKGROUND}"
+          />
+          '''
+
+          svg = re.sub(
+              r'(<svg[^>]*>)',
+              r'\1' + background,
+              svg,
+              count=1
+          )
+
+          # ------------------------------------------
+          # 2. Faz as animações repetirem
+          # ------------------------------------------
+
+          # Altera qualquer repeatCount existente
+          svg = re.sub(
+              r'repeatCount="[^"]*"',
+              'repeatCount="indefinite"',
+              svg
+          )
+
+          # ------------------------------------------
+          # 3. Adiciona repeatCount nas animações
+          # ------------------------------------------
+
+          def modify_animation(match):
+              tag = match.group(0)
+
+              if "repeatCount=" not in tag:
+                  tag = tag[:-2] + ' repeatCount="indefinite">'
+
+              return tag
+
+          svg = re.sub(
+              r'<animate\b[^>]*>',
+              modify_animation,
+              svg
+          )
+
+          # ------------------------------------------
+          # 4. Ajusta a duração para criar a pausa
+          # ------------------------------------------
+
+          # O SVG original usa dur="8s".
+          #
+          # Vamos transformar em:
+          #
+          # 0s ---------------- 8s ---- 10s
+          # |                    |       |
+          # começo              fim     reinício
+          #
+          # A animação fica parada durante os
+          # últimos 2 segundos antes de reiniciar.
+
+          svg = re.sub(
+              rf'dur="{ANIMATION_TIME}s"',
+              f'dur="{TOTAL_TIME}s"',
+              svg
+          )
+
+          # ------------------------------------------
+          # 5. Adiciona uma pequena pausa usando fill
+          # ------------------------------------------
+          #
+          # Mantemos o último estado durante a pausa.
+          #
+
+          svg = re.sub(
+              r'fill="freeze"',
+              'fill="freeze"',
+              svg
+          )
+
+          svg_path.write_text(svg, encoding="utf-8")
+
+          print("Tetris personalizado com sucesso!")
+          print(f"Animação: {ANIMATION_TIME}s")
+          print(f"Pausa: {PAUSE_TIME}s")
+          print(f"Loop total: {TOTAL_TIME}s")
+
+      # ==========================================
+      # Publica o SVG na branch output
+      # ==========================================
 
       - name: Publish animation
         uses: crazy-max/ghaction-github-pages@v3.1.0
