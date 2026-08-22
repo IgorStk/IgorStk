@@ -41,8 +41,8 @@
 
 ## 🌐 Contato
 
-* 💼 **[LinkedIn](www.linkedin.com/in/igor-roberto-freitas-barbosa-297ba438b)**
-* 📧 **[igorrobertofreitasbarbosa@gmail.com](mailto:igorrobertofreitasbarbosa@gmail.com)**
+* 💼 [LinkedIn](www.linkedin.com/in/igor-roberto-freitas-barbosa-297ba438b)
+* 📧 [igorrobertofreitasbarbosa@gmail.com](mailto:igorrobertofreitasbarbosa@gmail.com)
 
 ---
 
