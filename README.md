@@ -65,3 +65,9 @@
 <div align="center">
   <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=IgorStk&layout=compact&theme=tokyonight&hide_border=false" width="400" alt="Linguagens mais utilizadas" />
   <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=IgorStk&show_icons=true
+
+
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/IgorStk/IgorStk/output/contribution-graph-tetris.svg" />
+</div>
