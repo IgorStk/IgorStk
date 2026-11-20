@@ -62,12 +62,26 @@
 
 ## 📈 Estatísticas do GitHub
 
-<div align="center">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=IgorStk&layout=compact&theme=tokyonight&hide_border=false" width="400" alt="Linguagens mais utilizadas" />
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=IgorStk&show_icons=true
+<div>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=IgorStk&layout=compact&theme=tokyonight&hide_border=false" width="400" />
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=IgorStk&show_icons=true&theme=tokyonight&hide_border=false&title_color=7C3AED&icon_color=7C3AED" alt="Stats" 
+</div>
 
 
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/IgorStk/IgorStk/output/contribution-graph-tetris.svg" />
 </div>
+
+---
+
+## 🌐 Contato
+
+* 💼 [LinkedIn](https://www.linkedin.com/in/igor-roberto-freitas-barbosa-297ba438b/)
+* 📧 [igorrobertofreitasbarbosa@gmail.com](mailto:igorrobertofreitasbarbosa@gmail.com)
+
+---
+
+Sempre em busca de novos desafios e oportunidades para aprender, colaborar e criar soluções que façam a diferença.
+
+---
