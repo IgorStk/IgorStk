@@ -62,9 +62,10 @@
 
 ## 📈 Estatísticas do GitHub
 
-<div>
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=IgorStk&layout=compact&theme=tokyonight&hide_border=false" width="400" />
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=IgorStk&show_icons=true&theme=tokyonight&hide_border=false&title_color=7C3AED&icon_color=7C3AED" alt="Stats" 
+<div align="center">
+  <img src="https://github-readme-stats-beige-two-70.vercel.app/api/top-langs/?username=IgorStk&layout=compact&theme=tokyonight&hide_border=false" width="400" />
+  <br />
+  <img src="https://github-readme-stats-beige-two-70.vercel.app/api?username=IgorStk&show_icons=true&theme=tokyonight&hide_border=false&title_color=7C3AED&icon_color=7C3AED&count_private=true&hide_rank=true" alt="Stats" />
 </div>
 
 
