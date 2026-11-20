@@ -60,6 +60,13 @@
 
 ---
 
+## 🌐 Contato
+
+* 💼 [LinkedIn](https://www.linkedin.com/in/igor-roberto-freitas-barbosa-297ba438b/)
+* 📧 [igorrobertofreitasbarbosa@gmail.com](mailto:igorrobertofreitasbarbosa@gmail.com)
+
+---
+
 ## 📈 Estatísticas do GitHub
 
 <div align="center">
@@ -76,13 +83,4 @@
 
 ---
 
-## 🌐 Contato
-
-* 💼 [LinkedIn](https://www.linkedin.com/in/igor-roberto-freitas-barbosa-297ba438b/)
-* 📧 [igorrobertofreitasbarbosa@gmail.com](mailto:igorrobertofreitasbarbosa@gmail.com)
-
----
-
 Sempre em busca de novos desafios e oportunidades para aprender, colaborar e criar soluções que façam a diferença.
-
----
